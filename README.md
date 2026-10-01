@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# موقع شركة حدائق اليمامة للتجارة والمقاولات 🌿
 
-## Getting Started
+موقع حديث وفاخر متكامل مبني باستخدام **Next.js (App Router)**، **TypeScript**، **Tailwind CSS**، و **Lucide React**.
 
-First, run the development server:
+---
 
+## 🚀 التشغيل السريع
+
+### 1. المتطلبات الأساسية
+- Node.js (v18.18 أو أحدث)
+- npm
+
+### 2. تثبيت الحزم
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 3. تشغيل خادم التطوير المحلي
+```bash
+npm run dev
+```
+افتح المتصفح على: [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 4. بناء المشروع للإنتاج
+```bash
+npm run build
+npm run start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 📂 هيكلية المشروع والمحتوى
 
-To learn more about Next.js, take a look at the following resources:
+```text
+garden-website/
+├── src/
+│   ├── app/
+│   │   ├── layout.tsx         # إعداد الخطوط العربية، الاتجاه RTL، ووسوم الـ SEO
+│   │   ├── page.tsx           # تجميع الأقسام وبيانات Schema.org المنظمة
+│   │   └── globals.css        # المتغيرات اللونية وأنماط الرسوم المتحركة
+│   ├── components/
+│   │   ├── Navbar.tsx         # شريط التنقل المتجاوب
+│   │   ├── Hero.tsx           # القسم الرئيسي مع العدادات والإحصائيات
+│   │   ├── About.tsx          # نبذة عن الشركة، الرؤية، والرسالة والشهادات
+│   │   ├── Services.tsx       # بطاقات الخدمات مع فلترة تفاعلية
+│   │   ├── Clients.tsx        # شركاء النجاح والجهات الحكومية المعتمدة
+│   │   ├── Vision2030.tsx     # الالتزام الوطني برؤية المملكة 2030
+│   │   ├── Faq.tsx            # الأسئلة الشائعة بنظام الأكورديون التفاعلي
+│   │   ├── CtaSection.tsx     # قسم الحجز والتواصل السريع
+│   │   ├── Footer.tsx         # تذييل الصفحة وبيانات الاتصال التفصيلية
+│   │   └── FloatingActions.tsx# زر واتساب العائم وزر الصعود للأعلى
+│   └── content/
+│       └── siteContent.ts     # ملف المحتوى المركزي المفصول بالكامل
+├── next.config.ts             # إعدادات النطاقات المسموحة للصور (Unsplash, Wikimedia)
+└── package.json
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🛠️ دليل التخصيص وإدارة المحتوى
 
-## Deploy on Vercel
+### 1. تعديل بيانات الشركة والنصوص
+جميع النصوص والبيانات محفوظة في ملف مركزي واحد:
+👉 [`src/content/siteContent.ts`](file:///C:/Users/lenovo/.gemini/antigravity-ide/scratch/garden-website/src/content/siteContent.ts)
+- اسم الشركة ورقم الهاتف والعنوان
+- أسئلة وأجوبة الـ FAQ
+- إحصائيات وأرقام الخبرة والمشاريع
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 2. تغيير الصور
+يمكنك استبدال روابط الصور في `siteContent.ts` أو حفظ الصور محلياً داخل مجلد:
+`public/images/` واستدعائها بالمسار: `/images/your-image.jpg`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 3. تعديل الألوان
+تم تعريف لوحة الألوان الخاصة بالهوية داخل:
+👉 [`src/app/globals.css`](file:///C:/Users/lenovo/.gemini/antigravity-ide/scratch/garden-website/src/app/globals.css)
+- اللون الأساسي الأخضر: `--primary: #026D03`
+- اللون الثانوي البرتقالي / الذهبي: `--accent: #E78F11`
+- الخلفيات الفاتحة: `--light: #f8faf5`
+
+### 4. ربط نظام إدارة محتوى (CMS) مستقبلاً
+بفضل فصل المحتوى في `src/content/siteContent.ts`، يمكنك استبدال هذا الملف بدوال جلب بيانات غير متزامنة (Async Server Components) من أي CMS مثل:
+- Strapi
+- Sanity
+- WordPress REST API
+- Supabase
+دون الحاجة لتعديل المكونات الرسومية إطلاقاً.
