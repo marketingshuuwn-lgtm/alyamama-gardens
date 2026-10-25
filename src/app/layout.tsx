@@ -10,6 +10,7 @@ const alyamama = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://alyamama-gardens.vercel.app"),
   title: "حدائق اليمامة للتجارة والمقاولات | تصميم وتنفيذ الحدائق وشبكات الري بالرياض",
   description:
     "شركة حدائق اليمامة للتجارة والمقاولات – تصنيف درجة ثالثة. خبرة تفوق 15 عاماً في تصميم وتنفيذ الحدائق، المشاتل، النباتات الداخلية والخارجية، شبكات الري الذكية، والنجيلة الصناعية بالرياض والمملكة.",
@@ -23,6 +24,18 @@ export const metadata: Metadata = {
     "مظلات حدائق",
   ],
   authors: [{ name: "حدائق اليمامة" }],
+  icons: {
+    icon: [
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+      { url: "/images/logo.png", type: "image/png" },
+      { url: "/favicon.ico" },
+    ],
+    shortcut: "/icon.png",
+    apple: [
+      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+      { url: "/images/logo.png" },
+    ],
+  },
   openGraph: {
     title: "حدائق اليمامة للتجارة والمقاولات | تصميم وتنفيذ الحدائق والمشاتل",
     description:
@@ -30,6 +43,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "ar_SA",
     siteName: "حدائق اليمامة",
+    images: [
+      {
+        url: "/images/logo.png",
+        width: 512,
+        height: 512,
+        alt: "شعار حدائق اليمامة",
+      },
+    ],
   },
 };
 
@@ -47,6 +68,9 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl" className={`${alyamama.variable} scroll-smooth`}>
       <head>
+        <link rel="icon" href="/icon.png" type="image/png" />
+        <link rel="icon" href="/images/logo.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/apple-icon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
