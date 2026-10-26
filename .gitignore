@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Local visual review outputs
+/qa/
+/docs/photo-contact-sheet.png

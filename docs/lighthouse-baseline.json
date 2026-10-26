@@ -1,0 +1,68 @@
+[
+  {
+    "name": "الجوال",
+    "date": "2026-10-26T17:43:06.852Z",
+    "url": "https://alyamama-gardens.vercel.app/",
+    "scores": {
+      "performance": 0.89,
+      "accessibility": 0.98,
+      "best-practices": 1,
+      "seo": 1,
+      "agentic-browsing": 1
+    },
+    "metrics": {
+      "first-contentful-paint": "2.0 s",
+      "largest-contentful-paint": "3.5 s",
+      "total-blocking-time": "10 ms",
+      "cumulative-layout-shift": "0"
+    },
+    "headingIssues": [
+      "شهادات جودة عالمية",
+      "رؤيتنا",
+      "شركاؤنا في",
+      "تعزيز جودة الحياة والمبادرة الخضراء",
+      "لم تجد إجابة لسؤالك؟",
+      "روابط سريعة"
+    ],
+    "console": []
+  },
+  {
+    "name": "سطح المكتب",
+    "date": "2026-10-26T17:44:41.537Z",
+    "url": "https://alyamama-gardens.vercel.app/",
+    "scores": {
+      "performance": 0.98,
+      "accessibility": 0.98,
+      "best-practices": 0.96,
+      "seo": 1,
+      "agentic-browsing": 1
+    },
+    "metrics": {
+      "first-contentful-paint": "0.8 s",
+      "largest-contentful-paint": "0.9 s",
+      "total-blocking-time": "0 ms",
+      "cumulative-layout-shift": "0"
+    },
+    "headingIssues": [
+      "شهادات جودة عالمية",
+      "رؤيتنا",
+      "شركاؤنا في",
+      "تعزيز جودة الحياة والمبادرة الخضراء",
+      "لم تجد إجابة لسؤالك؟",
+      "روابط سريعة"
+    ],
+    "console": [
+      {
+        "source": "network",
+        "description": "Failed to load resource: the server responded with a status of 404 ()",
+        "sourceLocation": {
+          "type": "source-location",
+          "url": "https://alyamama-gardens.vercel.app/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1558618047-3c8c76ca7d13%3Fw%3D600%26q%3D80&w=640&q=75",
+          "urlProvider": "network",
+          "line": 0,
+          "column": 0
+        }
+      }
+    ]
+  }
+]
